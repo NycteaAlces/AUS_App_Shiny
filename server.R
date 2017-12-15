@@ -46,13 +46,13 @@ truncvalue <- reactive(as.double(input$truncation[1]))
 ###########
  ########
  ##################
-  DB <- paste("Driver=FreeTDS; TDS_Version=7.0; DBQ=",inFile)
+  DB <- paste("Driver={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=",inFile)
   myconn <- odbcDriverConnect(DB)
-  strat <- sqlFetch(myconn, "strata")
+  strat <- sqlFetch(channel=myconn, "strata")
   strat_num <- nrow(strat)
   results_num_index <- as.integer(strat_num) + 1
 
-  datasheet <- as.data.frame(sqlQuery(myconn, "select * from datasheet"))
+  datasheet <- as.data.frame(sqlQuery(channel=myconn, "select * from datasheet"))
 
   names(datasheet) <- sub(" ", ".", names(datasheet))
   names(datasheet) <- sub(" ", ".", names(datasheet))
