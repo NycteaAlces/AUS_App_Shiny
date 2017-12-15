@@ -11,7 +11,7 @@ packages <- c("shiny", "RODBC","dplyr","Distance",
   "mrds", "ggplot2", "rgdal",
   "rgeos","dsm","knitr","maptools","gridExtra","sp", "DT")
 
-lapply(packages, require, character.only = T)
+sapply(packages, require, character.only = T)
 
 #ipak(packages)
 
