@@ -46,7 +46,7 @@ truncvalue <- reactive(as.double(input$truncation[1]))
 ###########
  ########
  ##################
-  DB <- paste("Driver=FreeTDS; DBQ=",inFile)
+  DB <- paste("Driver=FreeTDS; TDS_Version=7.0; DBQ=",inFile)
   myconn <- odbcDriverConnect(DB)
   strat <- sqlFetch(myconn, "strata")
   strat_num <- nrow(strat)
