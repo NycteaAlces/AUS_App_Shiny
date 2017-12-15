@@ -13,7 +13,7 @@ packages <- c("shiny", "RODBC","dplyr","Distance",
 
 lapply(packages, require, character.only = T)
 
-ipak(packages)
+#ipak(packages)
 
 ui <- fluidPage(
     verbatimTextOutput(("debug"))
