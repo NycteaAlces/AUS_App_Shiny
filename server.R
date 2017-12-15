@@ -1,12 +1,25 @@
 #install and load required packages -----------------
-
+require(shiny)
+require(RODBC)
+require(dplyr)
+require(Distance)
+require(mrds)
+require(ggplot2)
+require(rgdal)
+require(rgeos)
+require(dsm)
+require(knitr)
+require(maptools)
+require(gridExtra)
+require(sp)
+require(DT)
 
 # usage
-packages <- c("shiny", "RODBC","dplyr","Distance",
-  "mrds", "ggplot2", "rgdal",
-  "rgeos","dsm","knitr","maptools","gridExtra","sp", "DT")
+#packages <- c("shiny", "RODBC","dplyr","Distance",
+#  "mrds", "ggplot2", "rgdal",
+#  "rgeos","dsm","knitr","maptools","gridExtra","sp", "DT")
 
-sapply(packages, require, character.only = T)
+#sapply(packages, require, character.only = T)
 
 ui <- fluidPage(
     verbatimTextOutput(("debug"))
