@@ -1,4 +1,4 @@
-install and load required packages -----------------
+#install and load required packages -----------------
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg))
