@@ -7,7 +7,7 @@
 #}
 # usage
 packages <- c("shiny", "DT")
-lapply(packages, require, as.character=T)
+lapply(packages, require, character.only=T)
 
 
 shinyUI(pageWithSidebar(
