@@ -11,6 +11,8 @@ packages <- c("shiny", "RODBC","dplyr","Distance",
   "mrds", "ggplot2", "rgdal",
   "rgeos","dsm","knitr","maptools","gridExtra","sp", "DT")
 
+lapply(packages, require)
+
 ipak(packages)
 
 ui <- fluidPage(
