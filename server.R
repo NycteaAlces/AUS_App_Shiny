@@ -42,8 +42,11 @@ truncvalue <- reactive(as.double(input$truncation[1]))
 
   if (is.null(inFile))
     return(NULL)
-
-  DB <- paste("Driver={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=",inFile)
+#Sticky note
+###########
+ ########
+ ##################
+  DB <- paste("Driver=FreeTDS; DBQ=",inFile)
   myconn <- odbcDriverConnect(DB)
   strat <- sqlFetch(myconn, "strata")
   strat_num <- nrow(strat)
