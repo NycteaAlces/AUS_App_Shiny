@@ -6,9 +6,10 @@
 #  sapply(pkg, require, character.only = TRUE)
 #}
 # usage
-packages <- c("shiny", "DT")
-sapply(packages, require, character.only=T)
-
+#packages <- c("shiny", "DT")
+#sapply(packages, require, character.only=T)
+library(shiny)
+library(DT)
 
 shinyUI(pageWithSidebar(
   headerPanel("Alberta Aerial Ungulate Survey Population Estimator"),
