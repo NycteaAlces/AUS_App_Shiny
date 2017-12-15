@@ -792,7 +792,7 @@ GetShapefile <- function(InShapefile, OutShapefile){
         if (is.null(inFile))
           return(NULL)
         
-        DB <- paste("Driver={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=", inFile)
+        DB <- paste("Driver=FreeTDS;TDS_Version=7.0;Server=<server>;Port=<port>;Database=<db>;Uid=<uid>;Pwd=<pw>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30; DBQ=",inFile)
         myconn <- odbcDriverConnect(DB)
         strat <- sqlFetch(myconn, "strata")
         strat_num <- nrow(strat)
