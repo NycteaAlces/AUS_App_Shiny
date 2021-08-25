@@ -12,7 +12,7 @@ library(shiny)
 library(DT)
 
 shinyUI(pageWithSidebar(
-  headerPanel("Alberta Aerial Ungulate Survey Population Estimator"),
+  headerPanel("Rapid Assessment Tool for AUS Distance Sampling (Alberta)"),
   sidebarPanel(
     fileInput('MegaDB', 'Step 1. Choose your Access database to commence distance sampling analysis',
               accept=c('.accdb', '.mdb')),
